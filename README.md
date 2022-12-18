@@ -1,0 +1,33 @@
+# Tax-Calculator
+Basic tax calculations based on the tax rate and purchase amount
+
+package tax_calculator;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Dogan Utku Ozyigit
+ */
+public class Tax_Calculator {
+
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        double tax, price, tax_amount, final_price;
+        System.out.println("Welcome to tax calculator:");
+        System.out.print("Enter your tax rate, (for example; 18) :");
+        tax = input.nextDouble();
+        System.out.print("Enter your product price:");
+        price = input.nextDouble();
+        
+        tax_amount = price * tax /100;
+        final_price = price + tax_amount;
+        System.out.println("Your tax amount is " + tax_amount +" $");
+        System.out.println("Your total price is " + final_price + "$");
+        
+ 
+    }
+    
+}
